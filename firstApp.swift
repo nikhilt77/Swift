@@ -16,7 +16,7 @@ struct ContentView: View {
             Text(message)
                 .font(.largeTitle)
                 .fontWeight(.heavy)
-                .foregroundStyle(.blue)
+                .foregroundStyle(.red)
 
             Button(action: {
                 isButtonTapped.toggle()
@@ -31,7 +31,7 @@ struct ContentView: View {
                     .padding(.vertical, 10)
                     .padding(.horizontal, 20)
                     .frame(maxWidth: .infinity)
-                    .background(Color.blue)
+                    .background(Color.red)
                     .foregroundColor(.white)
                     .font(.title2)
                     .fontWeight(.semibold)
@@ -39,9 +39,9 @@ struct ContentView: View {
 
             }
             .scaleEffect(isButtonTapped ? 1.1 : 1.0)
-            .overlay(RoundedRectangle(cornerRadius: 10).stroke(.gray, lineWidth: 2))
+            .overlay(RoundedRectangle(cornerRadius: 10).stroke(.red, lineWidth: 1))
              .shadow(radius: 3)
-             .padding(.horizontal,10)
+             .padding(.horizontal,90)
               .animation(.easeInOut(duration: 0.15), value: isButtonTapped)
         }
         .padding(50)
